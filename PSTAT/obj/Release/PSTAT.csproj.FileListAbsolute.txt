@@ -1,0 +1,10 @@
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\bin\Release\PSTAT.exe.config
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\bin\Release\PSTAT.exe
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\bin\Release\PSTAT.pdb
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\bin\Release\Renci.SshNet.dll
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Release\PSTAT.Main_Form.resources
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Release\PSTAT.Properties.Resources.resources
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Release\PSTAT.csproj.GenerateResource.Cache
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Release\PSTAT.exe
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Release\PSTAT.pdb
+c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Release\PSTAT.csprojResolveAssemblyReference.cache

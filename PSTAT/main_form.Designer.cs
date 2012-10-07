@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.setableUsername = new System.Windows.Forms.TextBox();
             this.setablePassword = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.GroupBox();
@@ -39,7 +39,7 @@
             this.setableListBox = new System.Windows.Forms.ListBox();
             this.setableSearchUser = new System.Windows.Forms.TextBox();
             this.setableUpdated = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.refreshLogs = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,15 +48,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // loginButton
             // 
-            this.button1.Location = new System.Drawing.Point(199, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.Location = new System.Drawing.Point(199, 141);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(75, 23);
+            this.loginButton.TabIndex = 0;
+            this.loginButton.Text = "Login";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginbutton_click);
             // 
             // setableUsername
             // 
@@ -83,7 +83,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Login.Controls.Add(this.label2);
             this.Login.Controls.Add(this.label1);
-            this.Login.Controls.Add(this.button1);
+            this.Login.Controls.Add(this.loginButton);
             this.Login.Controls.Add(this.setableUsername);
             this.Login.Controls.Add(this.setablePassword);
             this.Login.Location = new System.Drawing.Point(160, 115);
@@ -116,7 +116,7 @@
             this.PrintGroup.Controls.Add(this.setableListBox);
             this.PrintGroup.Controls.Add(this.setableSearchUser);
             this.PrintGroup.Controls.Add(this.setableUpdated);
-            this.PrintGroup.Controls.Add(this.button2);
+            this.PrintGroup.Controls.Add(this.refreshLogs);
             this.PrintGroup.Controls.Add(this.comboBox1);
             this.PrintGroup.Location = new System.Drawing.Point(12, 75);
             this.PrintGroup.Name = "PrintGroup";
@@ -152,15 +152,15 @@
             this.setableUpdated.TabIndex = 2;
             this.setableUpdated.Text = "Last Updated:";
             // 
-            // button2
+            // refreshLogs
             // 
-            this.button2.Image = global::PSTAT.Properties.Resources.refresh;
-            this.button2.Location = new System.Drawing.Point(515, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 37);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.refreshLogs.Image = global::PSTAT.Properties.Resources.refresh;
+            this.refreshLogs.Location = new System.Drawing.Point(515, 10);
+            this.refreshLogs.Name = "refreshLogs";
+            this.refreshLogs.Size = new System.Drawing.Size(39, 37);
+            this.refreshLogs.TabIndex = 1;
+            this.refreshLogs.UseVisualStyleBackColor = true;
+            this.refreshLogs.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // comboBox1
             // 
@@ -219,7 +219,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.TextBox setableUsername;
         private System.Windows.Forms.TextBox setablePassword;
         private System.Windows.Forms.GroupBox Login;
@@ -227,7 +227,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox PrintGroup;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button refreshLogs;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label setableUpdated;
         private System.Windows.Forms.TextBox setableSearchUser;

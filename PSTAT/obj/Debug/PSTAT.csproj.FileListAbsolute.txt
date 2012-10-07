@@ -8,3 +8,13 @@ c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Debug\PSTAT.e
 c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\obj\Debug\PSTAT.pdb
 c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\bin\Debug\PSTAT.exe.config
 c:\users\dan\documents\visual studio 2012\Projects\PSTAT\PSTAT\bin\Debug\Renci.SshNet.dll
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\bin\Debug\PSTAT.exe.config
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\obj\Debug\PSTAT.exe
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\obj\Debug\PSTAT.pdb
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\bin\Debug\PSTAT.exe
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\bin\Debug\PSTAT.pdb
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\bin\Debug\Renci.SshNet.dll
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\obj\Debug\PSTAT.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\obj\Debug\PSTAT.Main_Form.resources
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\obj\Debug\PSTAT.Properties.Resources.resources
+C:\Users\Dan\Documents\GitHub\RPI_Helpdesk_pstat\PSTAT\obj\Debug\PSTAT.csproj.GenerateResource.Cache

@@ -1,33 +1,48 @@
-﻿using System;
+﻿/*  RPI helpdesk PSTAT
+ *  Dan Berkowitz October 2012
+ *  This code is for printer handling
+ */
+
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace PSTAT
 {
     class RPI_Print
     {
-        private string printer = "";
-        private printJob[] STORAGE;
+        private string printer = ""; //The printer name that is being worked on
+        private printJob[] STORAGE;  //This stores all the printer data
+
+        /*
+         *  This code goes and returns a arrray of print jobs, give it a printer name and the authorication object
+         */
         public printJob[] get_prints_printer(string passedPrinter, RPI_Auth passedAuth)
         {
-            printer = passedPrinter;
-            List<printJob> returnData = new List<printJob>();
-            string print_info = passedAuth.returnSSH("lpc stat " + passedPrinter);
+            printer = passedPrinter; // store the data in hte private object
+            List<printJob> returnData = new List<printJob>(); // we start with a list then transfer to a array
+            string print_info = passedAuth.returnSSH("lpc stat " + passedPrinter); // check which server handles that printer
             int startOfString = print_info.IndexOf("sends to") + 9;
             int endOfString = print_info.IndexOf(")", startOfString);
             if (print_info.Contains("unknown printer"))
                 return returnData.ToArray();
             string printServer = print_info.Substring(startOfString, endOfString - startOfString);
 
+            //go and get the log for that printer from the server
             string returnedLog = passedAuth.returnSSHFrom("cat /var/adm/lpd/" + passedPrinter + "/log", printServer);
 
+            //split up the log by line
             string[] returnedBroken = returnedLog.Split('\n');
+
+            //null out the string, for the tiny memory savings!
             returnedLog = "";
+
+            //Create a temporary job that will be our object to add to the array
             printJob tempJob = new printJob();
+            //go line by line through log
             for (int i = 0; i < returnedBroken.Length; i++)
             {
-                if (tempJob.JobStart == "")
+                if (tempJob.JobStart == "") //are we finding the start of a job or the end
                 {
                     //look for start
                     if (returnedBroken[i].Contains("papif: Starting"))
@@ -62,20 +77,24 @@ namespace PSTAT
                         tempJob = new printJob();
                     }
                 }
-                if (i == returnedBroken.Length)
+                if (i == returnedBroken.Length) // if we are at the end, and the job hasnt finished
                 {
                     returnData.Add(tempJob);
                 }
             }
             STORAGE = returnData.ToArray();
-            return STORAGE;
+            return STORAGE; // return the array of data
         }
+
+        /*
+         *  Filter the stored printer information with a filter that is passed in
+         */
         public printJob[] filter_printers(string passedFilter)
         {
             List<printJob> returnData = new List<printJob>();
             foreach (printJob JOB in STORAGE)
             {
-                if (JOB.JobUser.Contains(passedFilter))
+                if (JOB.JobUser.Contains(passedFilter)) //Contains isnt most effiecnt way of doing this, but for our use its ok
                 {
                     returnData.Add(JOB);
                 }
@@ -84,6 +103,9 @@ namespace PSTAT
         }
     }
 
+    /*
+     *   Setup the pritner job type
+     */
     class printJob
     {
         private string username;
